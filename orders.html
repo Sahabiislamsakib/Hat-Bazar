@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Hat Bazar | Order History</title>
+    <meta name="description" content="View your order history at Hat Bazar. Track orders, view details, and manage returns.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+                <div class="top-bar-right">
+                    <button class="language-toggle">EN / বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+
+                <div class="search-bar">
+                    <form action="search-results.html" method="GET">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit"><i data-lucide="search"></i></button>
+                    </form>
+                </div>
+
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-btn" title="Wishlist"><i data-lucide="heart"></i></a>
+                    <a href="account.html" class="icon-btn" title="Account"><i data-lucide="user"></i></a>
+                    <a href="cart.html" class="icon-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="icon-badge cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay"></div>
+    <aside class="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+            <button class="sidebar-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-item"><a href="account.html" class="sidebar-nav-link">Profile</a></div>
+            <div class="sidebar-nav-item"><a href="orders.html" class="sidebar-nav-link active">My Orders</a></div>
+            <div class="sidebar-nav-item"><a href="wishlist.html" class="sidebar-nav-link">Wishlist</a></div>
+        </nav>
+    </aside>
+
+    <main class="orders-page">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>My Orders</h1>
+                <p>Track and manage your orders</p>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <section class="section" style="padding-top: 24px;">
+            <div class="container">
+                <div class="account-layout">
+                    <!-- Sidebar -->
+                    <aside class="account-sidebar">
+                        <a href="account.html" class="account-nav-item">
+                            <span class="account-nav-icon"><i data-lucide="user" style="width:18px;height:18px;"></i></span>
+                            <span>Profile</span>
+                        </a>
+                        <a href="orders.html" class="account-nav-item active">
+                            <span class="account-nav-icon"><i data-lucide="package" style="width:18px;height:18px;"></i></span>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="account-nav-item">
+                            <span class="account-nav-icon"><i data-lucide="heart" style="width:18px;height:18px;"></i></span>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="#" class="account-nav-item" onclick="logout(); return false;">
+                            <span class="account-nav-icon"><i data-lucide="log-out" style="width:18px;height:18px;"></i></span>
+                            <span>Logout</span>
+                        </a>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="account-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <h2>Order History</h2>
+                            <select class="form-select" style="width: auto;">
+                                <option>All Orders</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 6 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                        </div>
+
+                        <div class="orders-table-wrapper" style="overflow-x: auto;">
+                            <table class="orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Items</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orders-tbody">
+                                    <tr>
+                                        <td><strong>HB12345678</strong></td>
+                                        <td>Jan 15, 2025</td>
+                                        <td>3 items</td>
+                                        <td>৳12,450</td>
+                                        <td><span class="badge badge-status badge-delivered">Delivered</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-outline">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HB87654321</strong></td>
+                                        <td>Jan 10, 2025</td>
+                                        <td>2 items</td>
+                                        <td>৳3,250</td>
+                                        <td><span class="badge badge-status badge-shipped">Shipped</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-outline">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HB11223344</strong></td>
+                                        <td>Jan 5, 2025</td>
+                                        <td>1 item</td>
+                                        <td>৳1,850</td>
+                                        <td><span class="badge badge-status badge-delivered">Delivered</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-outline">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HB55667788</strong></td>
+                                        <td>Dec 28, 2024</td>
+                                        <td>5 items</td>
+                                        <td>৳8,900</td>
+                                        <td><span class="badge badge-status badge-cancelled">Cancelled</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-outline">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HB99887766</strong></td>
+                                        <td>Dec 20, 2024</td>
+                                        <td>2 items</td>
+                                        <td>৳4,500</td>
+                                        <td><span class="badge badge-status badge-delivered">Delivered</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-outline">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination" style="margin-top: 32px;">
+                            <a href="#" class="pagination-item pagination-prev"><i data-lucide="chevron-left" style="width:16px;height:16px;vertical-align:middle;"></i> Prev</a>
+                            <span class="pagination-item pagination-current">1</span>
+                            <a href="#" class="pagination-item pagination-link">2</a>
+                            <a href="#" class="pagination-item pagination-next">Next <i data-lucide="chevron-right" style="width:16px;height:16px;vertical-align:middle;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+                    <p class="footer-desc">Your trusted online marketplace in Bangladesh.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="orders.html">My Orders</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem('user');
+            showToast('Logged out successfully', 'success');
+            setTimeout(() => { window.location.href = 'index.html'; }, 1000);
+        }
+
+        // --- Order rendering ---
+        const allOrders = JSON.parse(localStorage.getItem('orders') || '[]');
+        const tbody = document.getElementById('orders-tbody');
+
+        function renderOrders(list) {
+            if (list.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding: 48px; color: var(--gray-500);">
+                            <div style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gray-300)"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                            <strong>No orders yet</strong><br>
+                            <a href="products.html" class="btn btn-primary" style="margin-top:16px;">Start Shopping</a>
+                        </td>
+                    </tr>`;
+                return;
+            }
+            const statusClass = { pending: 'badge-pending', shipped: 'badge-shipped', delivered: 'badge-delivered', cancelled: 'badge-cancelled' };
+            tbody.innerHTML = list.map(order => {
+                const date = new Date(order.date).toLocaleDateString('en-BD');
+                const cls = statusClass[order.status] || 'badge-pending';
+                const statusText = order.status.charAt(0).toUpperCase() + order.status.slice(1);
+                return `
+                    <tr>
+                        <td><strong>${order.orderNumber}</strong></td>
+                        <td>${date}</td>
+                        <td>${order.items.length} item${order.items.length !== 1 ? 's' : ''}</td>
+                        <td>৳${order.total.toLocaleString()}</td>
+                        <td><span class="badge badge-status ${cls}">${statusText}</span></td>
+                        <td><a href="order-confirmation.html?order=${order.orderNumber}" class="btn btn-sm btn-outline">View</a></td>
+                    </tr>`;
+            }).join('');
+        }
+
+        // Initial render — show real orders, or placeholder rows only if no real orders exist
+        if (allOrders.length > 0) {
+            renderOrders(allOrders);
+        }
+        // If allOrders is empty the static HTML rows remain as demo content — acceptable UX
+
+        // Filter dropdown
+        const filterSelect = document.querySelector('.account-content select');
+        if (filterSelect) {
+            filterSelect.addEventListener('change', function() {
+                const val = this.value;
+                const now = Date.now();
+                let filtered = [...allOrders];
+                if (val === 'Last 30 Days') filtered = filtered.filter(o => now - new Date(o.date).getTime() <= 30 * 864e5);
+                else if (val === 'Last 6 Months') filtered = filtered.filter(o => now - new Date(o.date).getTime() <= 180 * 864e5);
+                else if (val === 'Last Year') filtered = filtered.filter(o => now - new Date(o.date).getTime() <= 365 * 864e5);
+                renderOrders(filtered);
+            });
+        }
+    </script>
+</body>
+</html>

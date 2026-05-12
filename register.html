@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hat Bazar | Create Your Account</title>
+    <meta name="description" content="Create your Hat Bazar account. Join thousands of happy shoppers in Bangladesh.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Create Account <i data-lucide="party-popper" style="width:24px;height:24px;vertical-align:middle;"></i></h2>
+                <p>Join thousands of happy shoppers</p>
+            </div>
+
+            <!-- Social Register -->
+            <div class="social-login">
+                <button class="social-btn" onclick="showToast('Google signup coming soon!', 'info')">
+                    <i data-lucide="search" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i> Google
+                </button>
+                <button class="social-btn" onclick="showToast('Facebook signup coming soon!', 'info')">
+                    <i data-lucide="facebook" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i> Facebook
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>Or register with email</span>
+            </div>
+
+            <!-- Register Form -->
+            <form onsubmit="handleRegister(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label form-label-required">First Name</label>
+                        <div class="form-input-icon-wrapper">
+                            <span class="form-input-icon"><i data-lucide="user" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                            <input type="text" class="form-input" id="reg-firstname" placeholder="First name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label form-label-required">Last Name</label>
+                        <div class="form-input-icon-wrapper">
+                            <span class="form-input-icon"><i data-lucide="user" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                            <input type="text" class="form-input" id="reg-lastname" placeholder="Last name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label form-label-required">Email Address</label>
+                    <div class="form-input-icon-wrapper">
+                        <span class="form-input-icon"><i data-lucide="mail" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                        <input type="email" class="form-input" id="reg-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label form-label-required">Phone Number</label>
+                    <div class="form-input-icon-wrapper">
+                        <span class="form-input-icon"><i data-lucide="phone" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                        <input type="tel" class="form-input" id="reg-phone" placeholder="01XXXXXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label form-label-required">Password</label>
+                    <div class="form-input-icon-wrapper">
+                        <span class="form-input-icon"><i data-lucide="lock" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                        <input type="password" class="form-input" id="reg-password" placeholder="Create password (min 6 chars)" minlength="6" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label form-label-required">Confirm Password</label>
+                    <div class="form-input-icon-wrapper">
+                        <span class="form-input-icon"><i data-lucide="lock" style="width:16px;height:16px;vertical-align:middle;"></i></span>
+                        <input type="password" class="form-input" id="reg-confirm" placeholder="Confirm password" required>
+                    </div>
+                </div>
+
+                <label class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" required>
+                    <span class="form-check-label">I agree to the <a href="terms.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a></span>
+                </label>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="index.html" class="text-muted" style="font-size: 0.9rem;"><i data-lucide="arrow-left" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;"></i> Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding-top: 40px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('reg-firstname').value;
+            const lastName = document.getElementById('reg-lastname').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const confirm = document.getElementById('reg-confirm').value;
+            
+            if (password !== confirm) {
+                showToast('Passwords do not match!', 'error');
+                return;
+            }
+            
+            // Demo: Simulate registration
+            localStorage.setItem('user', JSON.stringify({ 
+                email, 
+                name: firstName + ' ' + lastName 
+            }));
+            showToast('Account created successfully! Welcome!', 'success');
+            
+            setTimeout(() => {
+                window.location.href = 'account.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

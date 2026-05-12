@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Hat Bazar | Account Dashboard</title>
+    <meta name="description" content="Manage your Hat Bazar account. Update profile, view orders, manage addresses and settings.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+                <div class="top-bar-right">
+                    <button class="language-toggle">EN / বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+
+                <div class="search-bar">
+                    <form action="search-results.html" method="GET">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit"><i data-lucide="search"></i></button>
+                    </form>
+                </div>
+
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-btn" title="Wishlist"><i data-lucide="heart"></i></a>
+                    <a href="account.html" class="icon-btn" title="Account"><i data-lucide="user"></i></a>
+                    <a href="cart.html" class="icon-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="icon-badge cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay"></div>
+    <aside class="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+            <button class="sidebar-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-item"><a href="account.html" class="sidebar-nav-link active">Profile</a></div>
+            <div class="sidebar-nav-item"><a href="orders.html" class="sidebar-nav-link">My Orders</a></div>
+            <div class="sidebar-nav-item"><a href="wishlist.html" class="sidebar-nav-link">Wishlist</a></div>
+            <div class="sidebar-nav-item"><a href="#" class="sidebar-nav-link" onclick="logout()">Logout</a></div>
+        </nav>
+    </aside>
+
+    <main class="account-page">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>My Account</h1>
+                <p>Manage your profile and preferences</p>
+            </div>
+        </div>
+
+        <!-- Account Section -->
+        <section class="section" style="padding-top: 24px;">
+            <div class="container">
+                <div class="account-layout">
+                    <!-- Sidebar -->
+                    <aside class="account-sidebar">
+                        <a href="account.html" class="account-nav-item active">
+                            <span class="account-nav-icon"><i data-lucide="user" style="width:18px;height:18px;"></i></span>
+                            <span>Profile</span>
+                        </a>
+                        <a href="orders.html" class="account-nav-item">
+                            <span class="account-nav-icon"><i data-lucide="package" style="width:18px;height:18px;"></i></span>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="wishlist.html" class="account-nav-item">
+                            <span class="account-nav-icon"><i data-lucide="heart" style="width:18px;height:18px;"></i></span>
+                            <span>Wishlist</span>
+                        </a>
+                        <a href="#" class="account-nav-item" onclick="showToast('Addresses coming soon!', 'info'); return false;">
+                            <span class="account-nav-icon"><i data-lucide="map-pin" style="width:18px;height:18px;"></i></span>
+                            <span>Addresses</span>
+                        </a>
+                        <a href="#" class="account-nav-item" onclick="showToast('Settings coming soon!', 'info'); return false;">
+                            <span class="account-nav-icon"><i data-lucide="settings" style="width:18px;height:18px;"></i></span>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#" class="account-nav-item" onclick="logout(); return false;">
+                            <span class="account-nav-icon"><i data-lucide="log-out" style="width:18px;height:18px;"></i></span>
+                            <span>Logout</span>
+                        </a>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="account-content">
+                        <h2>Edit Profile</h2>
+
+                        <!-- Avatar Section -->
+                        <div class="profile-avatar-section">
+                            <div class="profile-avatar"><i data-lucide="user" style="width:40px;height:40px;color:var(--gray-400);"></i></div>
+                            <div>
+                                <button class="avatar-upload-btn">Change Photo</button>
+                                <p style="font-size: 0.85rem; color: var(--gray-600); margin-top: 8px;">JPG, PNG allowed. Max 2MB.</p>
+                            </div>
+                        </div>
+
+                        <!-- Profile Form -->
+                        <form onsubmit="updateProfile(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-input" id="profile-firstname" value="Demo">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-input" id="profile-lastname" value="User">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" id="profile-email" value="demo@hatbazar.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-input" id="profile-phone" value="01712345678">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Bio</label>
+                                <textarea class="form-textarea" rows="3" placeholder="Tell us about yourself"></textarea>
+                            </div>
+
+                            <div class="flex gap-2">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="reset" class="btn btn-light">Cancel</button>
+                            </div>
+                        </form>
+
+                        <hr style="margin: 48px 0; border: none; border-top: 1px solid var(--gray-200);">
+
+                        <h3>Change Password</h3>
+                        <form onsubmit="changePassword(event)" style="margin-top: 24px;">
+                            <div class="form-group">
+                                <label class="form-label">Current Password</label>
+                                <input type="password" class="form-input" placeholder="Enter current password">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">New Password</label>
+                                <input type="password" class="form-input" placeholder="Enter new password">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-input" placeholder="Confirm new password">
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+                    <p class="footer-desc">Your trusted online marketplace in Bangladesh.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" title="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" title="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="orders.html">My Orders</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Check if logged in
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = 'login.html';
+        } else {
+            // Pre-fill form
+            const names = user.name ? user.name.split(' ') : ['Demo', 'User'];
+            document.getElementById('profile-firstname').value = names[0] || 'Demo';
+            document.getElementById('profile-lastname').value = names[1] || 'User';
+            document.getElementById('profile-email').value = user.email || '';
+        }
+
+        function updateProfile(e) {
+            e.preventDefault();
+            showToast('Profile updated successfully!', 'success');
+        }
+
+        function changePassword(e) {
+            e.preventDefault();
+            showToast('Password updated successfully!', 'success');
+        }
+
+        function logout() {
+            localStorage.removeItem('user');
+            showToast('Logged out successfully', 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
