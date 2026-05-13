@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Hat Bazar | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about shipping, returns, payments, and more at Hat Bazar.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+                <div class="top-bar-right">
+                    <button class="language-toggle">EN / বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+
+                <div class="search-bar">
+                    <form action="search-results.html" method="GET">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit"><i data-lucide="search"></i></button>
+                    </form>
+                </div>
+
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-btn" title="Wishlist"><i data-lucide="heart"></i></a>
+                    <a href="account.html" class="icon-btn" title="Account"><i data-lucide="user"></i></a>
+                    <a href="cart.html" class="icon-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="icon-badge cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay"></div>
+    <aside class="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+            <button class="sidebar-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-item"><a href="index.html" class="sidebar-nav-link">Home</a></div>
+            <div class="sidebar-nav-item"><a href="faq.html" class="sidebar-nav-link active">FAQ</a></div>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>FAQ</h1>
+                <p>Find answers to your questions</p>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">FAQ</span>
+            </nav>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="section" style="padding-top: 24px;">
+            <div class="container">
+                <div class="faq-layout">
+                    <!-- Sidebar -->
+                    <aside class="faq-sidebar">
+                        <div class="faq-nav">
+                            <a href="#shipping" class="faq-nav-item active"><i data-lucide="truck" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>Shipping</a>
+                            <a href="#returns" class="faq-nav-item"><i data-lucide="rotate-ccw" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>Returns</a>
+                            <a href="#payments" class="faq-nav-item"><i data-lucide="credit-card" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>Payments</a>
+                        </div>
+                    </aside>
+
+                    <!-- FAQ Content -->
+                    <div class="faq-content">
+                        <!-- Shipping -->
+                        <div class="faq-group" id="shipping">
+                            <h3><i data-lucide="truck" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:var(--primary);"></i>Shipping Questions</h3>
+                            
+                            <div class="faq-item open">
+                                <button class="faq-question">
+                                    <span>How long does delivery take?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>We deliver within 2-5 business days for most areas in Bangladesh. Dhaka city deliveries are typically completed within 24-48 hours. For remote areas, delivery may take 5-7 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Do you offer free shipping?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Yes! We offer free shipping on all orders over ৳2000. For orders below this amount, a flat shipping fee of ৳60 is applied.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Which areas do you deliver to?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>We deliver to all 64 districts of Bangladesh including Dhaka, Chittagong, Sylhet, Rajshahi, Khulna, Barisal, Rangpur, and Mymensingh divisions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Can I track my order?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Yes! Once your order is shipped, you'll receive an SMS with tracking information. You can also track your order from your account dashboard under "My Orders".</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Returns -->
+                        <div class="faq-group" id="returns">
+                            <h3>↩️ Returns & Refunds</h3>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What is your return policy?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>We offer a 7-day return policy for most items. Products must be unused, in original packaging, and with all tags attached. Electronics may have different return conditions - please check individual product pages.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>How do I return an item?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>To return an item, go to "My Orders" in your account, find the order, and click "Return Item". Follow the instructions to schedule a pickup. Our team will collect the item from your address.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>When will I get my refund?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Refunds are processed within 5-7 business days after we receive the returned item. The refund will be credited to your original payment method or bKash account.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What items cannot be returned?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Items that cannot be returned include: innerwear, cosmetics, perishable goods, customized products, and items marked as "Final Sale".</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payments -->
+                        <div class="faq-group" id="payments">
+                            <h3><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:var(--primary);"></i>Payment Questions</h3>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What payment methods do you accept?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>We accept Cash on Delivery (COD), bKash, Nagad, Rocket, credit/debit cards (Visa, Mastercard), and bank transfers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Is Cash on Delivery available?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Yes! Cash on Delivery is available for all orders across Bangladesh. Simply select "Cash on Delivery" at checkout and pay when you receive your order.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Is it safe to pay online?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Absolutely! We use SSL encryption and secure payment gateways to protect your information. Your payment details are never stored on our servers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Do you offer EMI options?</span>
+                                    <span class="faq-icon"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <div class="faq-answer-content">
+                                        <p>Yes! We offer EMI options for orders above ৳5000 through selected banks. Available EMI tenures are 3, 6, 9, and 12 months. Interest rates vary by bank.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+                    <p class="footer-desc">Your trusted online marketplace in Bangladesh.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                
+                // Open clicked item if it was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // Smooth scroll + active state for sidebar links
+        const faqNavItems = document.querySelectorAll('.faq-nav-item');
+
+        function setActiveNav(href) {
+            faqNavItems.forEach(link => link.classList.remove('active'));
+            const active = document.querySelector('.faq-nav-item[href="' + href + '"]');
+            if (active) active.classList.add('active');
+        }
+
+        faqNavItems.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                setActiveNav(href);
+            });
+        });
+
+        // Scroll-spy: update active tab as sections scroll into view
+        const faqGroups = document.querySelectorAll('.faq-group');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveNav('#' + entry.target.id);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        faqGroups.forEach(group => observer.observe(group));
+    </script>
+</body>
+</html>

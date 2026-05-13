@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Hat Bazar | News & Articles</title>
+    <meta name="description" content="Read the latest news, tips, and articles from Hat Bazar. Stay updated on trends and deals.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+                <div class="top-bar-right">
+                    <button class="language-toggle">EN / বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+
+                <div class="search-bar">
+                    <form action="search-results.html" method="GET">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit"><i data-lucide="search"></i></button>
+                    </form>
+                </div>
+
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-btn" title="Wishlist"><i data-lucide="heart"></i></a>
+                    <a href="account.html" class="icon-btn" title="Account"><i data-lucide="user"></i></a>
+                    <a href="cart.html" class="icon-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="icon-badge cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay"></div>
+    <aside class="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+            <button class="sidebar-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-item"><a href="index.html" class="sidebar-nav-link">Home</a></div>
+            <div class="sidebar-nav-item"><a href="blog.html" class="sidebar-nav-link active">Blog</a></div>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Our Blog</h1>
+                <p>Latest news, tips, and trends</p>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Blog</span>
+            </nav>
+        </div>
+
+        <!-- Blog Section -->
+        <section class="section" style="padding-top: 24px;">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="gift" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Jan 15, 2025</span>
+                                <span class="blog-category">News</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=1">New Year Sale 2025: Up to 50% Off!</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                Celebrate the new year with amazing discounts across all categories. 
+                                Don't miss out on our biggest sale of the year!
+                            </p>
+                            <a href="blog-post.html?id=1" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="shirt" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Jan 10, 2025</span>
+                                <span class="blog-category">Fashion</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=2">Traditional Bangladeshi Clothing Guide</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                Learn about the rich heritage of Bangladeshi clothing. From panjabis to 
+                                jamdani sarees, discover the stories behind these beautiful garments.
+                            </p>
+                            <a href="blog-post.html?id=2" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="smartphone" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Jan 5, 2025</span>
+                                <span class="blog-category">Tech</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=3">Best Budget Smartphones 2025</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                Looking for a new phone? We've compiled a list of the best budget 
+                                smartphones available in Bangladesh right now.
+                            </p>
+                            <a href="blog-post.html?id=3" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="home" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Dec 28, 2024</span>
+                                <span class="blog-category">Home</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=4">Home Decor Tips for Small Spaces</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                Make the most of your living space with these creative home decor ideas 
+                                that work perfectly for apartments and small homes.
+                            </p>
+                            <a href="blog-post.html?id=4" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="gift" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Dec 20, 2024</span>
+                                <span class="blog-category">Tips</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=5">Gift Ideas for Every Budget</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                Struggling to find the perfect gift? Our gift guide has something for 
+                                everyone, from affordable treats to luxury presents.
+                            </p>
+                            <a href="blog-post.html?id=5" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image"><i data-lucide="truck" style="width:40px;height:40px;color:var(--primary);"></i></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>Dec 15, 2024</span>
+                                <span class="blog-category">News</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="blog-post.html?id=6">Now Delivering to All 64 Districts!</a>
+                            </h3>
+                            <p class="blog-excerpt">
+                                We're excited to announce that Hat Bazar now delivers to every district 
+                                in Bangladesh. Shop from anywhere and get doorstep delivery!
+                            </p>
+                            <a href="blog-post.html?id=6" class="read-more">Read More <i data-lucide="arrow-right" style="width:14px;height:14px;vertical-align:middle;"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" style="margin-top: 48px;">
+                    <span class="pagination-item pagination-current">1</span>
+                    <a href="#" class="pagination-item pagination-link">2</a>
+                    <a href="#" class="pagination-item pagination-link">3</a>
+                    <a href="#" class="pagination-item pagination-next">Next <i data-lucide="chevron-right" style="width:16px;height:16px;vertical-align:middle;"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+                    <p class="footer-desc">Your trusted online marketplace in Bangladesh.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

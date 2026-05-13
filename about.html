@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hat Bazar | Our Story</title>
+    <meta name="description" content="Learn about Hat Bazar - Bangladesh's trusted online marketplace. Our mission, vision, and the team behind it.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i data-lucide="truck" style="width:14px;height:14px;vertical-align:middle;"></i> Free shipping on orders over ৳2000</span>
+                    <span><i data-lucide="phone" style="width:14px;height:14px;vertical-align:middle;"></i> 09678-123456</span>
+                </div>
+                <div class="top-bar-right">
+                    <button class="language-toggle">EN / বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i data-lucide="shopping-bag"></i></span>
+                    Hat Bazar
+                </a>
+
+                <div class="search-bar">
+                    <form action="search-results.html" method="GET">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit"><i data-lucide="search"></i></button>
+                    </form>
+                </div>
+
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-btn" title="Wishlist"><i data-lucide="heart"></i></a>
+                    <a href="account.html" class="icon-btn" title="Account"><i data-lucide="user"></i></a>
+                    <a href="cart.html" class="icon-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="icon-badge cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="deals.html" class="nav-link">Deals</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay"></div>
+    <aside class="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+            <button class="sidebar-close" aria-label="Close menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-item"><a href="index.html" class="sidebar-nav-link">Home</a></div>
+            <div class="sidebar-nav-item"><a href="about.html" class="sidebar-nav-link active">About Us</a></div>
+            <div class="sidebar-nav-item"><a href="contact.html" class="sidebar-nav-link">Contact</a></div>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Learn our story and mission</p>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">About</span>
+            </nav>
+        </div>
+
+        <!-- Our Story -->
+        <section class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Our Story</h2>
+                        <p>
+                            Hat Bazar was founded in 2020 with a simple vision: to make quality products accessible 
+                            to every household in Bangladesh. What started as a small online store has grown into one 
+                            of the most trusted e-commerce platforms in the country.
+                        </p>
+                        <p>
+                            Our name "Hat Bazar" (হাট বাজার) reflects our roots - traditional Bangladeshi marketplaces 
+                            where communities gather, connect, and trade. We've brought that spirit online, combining 
+                            the trust and familiarity of local markets with the convenience of modern technology.
+                        </p>
+                        <p>
+                            Today, we serve thousands of customers across all 64 districts of Bangladesh, delivering 
+                            everything from traditional clothing to cutting-edge electronics right to their doorsteps.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <div style="display:flex;align-items:center;justify-content:center;width:100%;height:220px;background:var(--gray-100);border-radius:12px;"><i data-lucide="store" style="width:80px;height:80px;color:var(--primary);opacity:0.7;"></i></div>
+                    </div>
+                </div>
+
+                <!-- Mission & Vision -->
+                <div class="mission-vision-grid">
+                    <div class="mv-card">
+                        <h3><i data-lucide="target" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:var(--primary);"></i>Our Mission</h3>
+                        <p>
+                            To empower every Bangladeshi with access to quality products at fair prices, 
+                            delivered with reliability and care. We believe that e-commerce should serve 
+                            everyone, not just those in big cities.
+                        </p>
+                    </div>
+                    <div class="mv-card">
+                        <h3><i data-lucide="eye" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:var(--primary);"></i>Our Vision</h3>
+                        <p>
+                            To become Bangladesh's most loved e-commerce platform by 2030, known for our 
+                            commitment to quality, customer service, and supporting local businesses. 
+                            We envision a digitally connected Bangladesh where everyone has equal access to goods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-strip">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>10,000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Products Available</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>★★★★★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Since 2020</h3>
+                        <p>Years of Trust</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Team</h2>
+                    <p>The people behind Hat Bazar</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar" style="padding:0; overflow:hidden;">
+                            <img src="sakib.jpg" alt="Md. Sahabi Islam Sakib" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%;">
+                        </div>
+                        <h4>Md. Sahabi Islam Sakib</h4>
+                        <p>Founder &amp; CEO</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar" style="padding:0; overflow:hidden;">
+                            <img src="ariful.jpg" alt="Ariful Islam" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%;">
+                        </div>
+                        <h4>Ariful Islam</h4>
+                        <p>Head of Operations</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar" style="padding:0; overflow:hidden;">
+                            <img src="rimon.jpg" alt="Shahadat Hossain Remon" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%;">
+                        </div>
+                        <h4>Shahadat Hossain Remon</h4>
+                        <p>Technology Lead</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar" style="padding:0; overflow:hidden;">
+                            <img src="niloy.jpg" alt="Niloy Ahmed" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%;">
+                        </div>
+                        <h4>Niloy Ahmed</h4>
+                        <p>Customer Experience</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar" style="padding:0; overflow:hidden;">
+                            <img src="imtiaz.jpg" alt="Imtiaz Kabir" style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%;">
+                        </div>
+                        <h4>Imtiaz Kabir</h4>
+                        <p>Lead Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon"><i data-lucide="shopping-bag"></i></span> Hat Bazar</a>
+                    <p class="footer-desc">Your trusted online marketplace in Bangladesh.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" title="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" title="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="orders.html">My Orders</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hat Bazar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
